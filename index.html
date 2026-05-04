@@ -646,15 +646,170 @@
             margin: 0 4px;
         }
 
-        /* Responsive */
-        @media (max-width: 600px) {
-            .container { padding: 12px; }
-            .header { padding: 25px 10px; }
-            .card { padding: 18px; }
-            .calc-input-group { grid-template-columns: 1fr; }
-            .nav-tab { padding: 8px 12px; font-size: 0.85rem; }
+        /* ═══════════════ RESPONSIVE ═══════════════ */
+        /* Tablets */
+        @media (max-width: 900px) {
+            .container { padding: 16px; }
             .scoreboard { gap: 8px; }
-            .score-item { padding: 8px 12px; font-size: 0.85rem; }
+            .score-item { padding: 8px 14px; }
+            table { font-size: 0.92rem; }
+        }
+
+        /* Phones */
+        @media (max-width: 600px) {
+            body { font-size: 15px; }
+            .container { padding: 10px; }
+
+            /* Header */
+            .header { padding: 22px 8px; margin-bottom: 16px; }
+            .header h1 { font-size: 1.7rem; }
+            .header p { font-size: 0.9rem; }
+            .header .badge { font-size: 0.75rem; padding: 5px 12px; margin-top: 10px; }
+
+            /* Section titles */
+            .section-title { font-size: 1.45rem !important; line-height: 1.25; }
+            .section-subtitle { font-size: 0.92rem; }
+            .qsection-title { font-size: 1.15rem; padding: 8px 12px; }
+
+            /* Cards */
+            .card { padding: 16px 14px; margin-bottom: 14px; }
+            .card-title { font-size: 1.15rem; line-height: 1.3; }
+
+            /* Scoreboard - compact */
+            .scoreboard { gap: 6px; padding: 0 4px; margin-bottom: 16px; }
+            .score-item { padding: 6px 10px; gap: 6px; }
+            .score-item .icon { font-size: 1rem; }
+            .score-item .label { font-size: 0.7rem; }
+            .score-item .value { font-size: 0.95rem; min-width: 22px; }
+
+            /* Nav tabs - keep wrapped, tighter */
+            .nav-tabs { padding: 8px; gap: 5px; margin-bottom: 18px; }
+            .nav-tab { padding: 7px 11px; font-size: 0.78rem; }
+
+            /* Sub-nav */
+            .sub-nav { gap: 6px; }
+            .sub-nav-btn { font-size: 0.8rem; padding: 7px 12px; }
+
+            /* Tables - smaller text + horizontal scroll if needed */
+            .card { overflow-x: hidden; }
+            table { font-size: 0.82rem; display: block; max-width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+            th, td { padding: 8px 7px; white-space: nowrap; }
+            th { font-size: 0.78rem; }
+
+            /* Concept / formula / tip / warning / fun-fact boxes */
+            .concept-box, .tip-box, .funfact-box, .warning-box { padding: 14px; }
+            .concept-box h3, .tip-box h3 { font-size: 1.05rem; }
+            .formula-box { padding: 14px; margin: 12px 0; }
+            .formula-box .formula { font-size: 1.1rem; word-wrap: break-word; }
+
+            /* Lists / paragraphs */
+            p { font-size: 0.95rem; line-height: 1.6; }
+            li { font-size: 0.95rem; }
+
+            /* Question cards (MCQ / Practice / Tests) */
+            .question-card { padding: 14px 12px; margin: 12px 0; }
+            .question-text { font-size: 0.95rem; line-height: 1.5; }
+            .qnum { font-size: 0.78rem !important; padding: 2px 8px !important; }
+            .step, .final-answer { font-size: 0.9rem; padding: 8px 11px; }
+            .reveal-btn { font-size: 0.85rem; padding: 8px 14px; }
+            .answer-block { padding: 12px; }
+            .options-list { gap: 7px; }
+            .option-btn { padding: 9px 11px; font-size: 0.86rem; }
+
+            /* Calculator */
+            .calc-input-group { grid-template-columns: 1fr; gap: 10px; }
+            .calc-lab { padding: 16px 14px; }
+            .calc-lab h3 { font-size: 1rem; }
+            .calc-result { padding: 12px; }
+            .result-value { font-size: 1.05rem; word-wrap: break-word; }
+
+            /* SVG diagrams - ensure they don't overflow */
+            svg { max-width: 100%; height: auto; }
+            .density-triangle svg { width: 170px; }
+
+            /* Definitions / Cheat sheet grids - 1 column */
+            .definitions-grid { grid-template-columns: 1fr; gap: 12px; }
+            .cheat-grid { grid-template-columns: 1fr; gap: 12px; }
+
+            /* ELI11 Easy Explainer */
+            .eli11-card { padding: 18px 14px; }
+            .eli11-card::before { font-size: 0.7rem; padding: 3px 10px; left: 14px; }
+            .eli11-box { padding: 14px; font-size: 0.94rem; line-height: 1.65; }
+            .eli11-box h3 { font-size: 1.05rem; }
+            .eli11-box ul { margin-left: 16px !important; }
+
+            /* Joke cards - "tap to reveal" badge takes less room */
+            .joke-card { padding: 14px 16px; }
+            .joke-card::after { font-size: 0.65rem; top: 8px; right: 10px; }
+            .joke-q { font-size: 0.95rem; padding-right: 80px; line-height: 1.45; }
+            .joke-a { font-size: 0.9rem; }
+
+            /* Riddle cards */
+            .riddle-card { padding: 16px 14px; }
+            .riddle-q { font-size: 0.96rem; line-height: 1.5; }
+
+            /* Game arena */
+            .game-arena { padding: 16px 12px; }
+            .game-stats { gap: 8px; padding: 10px; flex-wrap: wrap; justify-content: center; }
+            .game-stat { font-size: 0.88rem; }
+
+            /* Float/Sink water tank */
+            .water-tank { max-width: 280px; height: 240px; }
+            .water-tank-item { font-size: 2.7em; }
+            .fs-question { font-size: 0.95rem; }
+            .fs-btn { padding: 11px 22px; font-size: 1rem; }
+
+            /* Reaction circle */
+            .reaction-circle { width: 180px; height: 180px; font-size: 1.15rem; padding: 16px; margin: 22px auto; }
+            .reaction-result { font-size: 1.05rem; }
+
+            /* Level selector */
+            .level-selector { gap: 6px; margin-bottom: 16px; }
+            .lvl-btn { font-size: 0.8rem; padding: 8px 12px; }
+            .lvl-desc { padding: 12px 14px; font-size: 0.9rem; line-height: 1.6; }
+            .lvl2-stats, .lvl3-stats { font-size: 0.88rem; padding: 8px; }
+
+            /* Sequence game */
+            .seq-display { font-size: 1rem; padding: 14px 12px; line-height: 1.85; min-height: 50px; }
+            .seq-color { padding: 4px 10px; font-size: 0.8rem; margin: 3px 2px; }
+            .seq-grid { gap: 10px; max-width: 280px; }
+            .seq-btn { height: 90px; font-size: 1rem; }
+
+            /* Boss battle */
+            .boss-arena { padding: 18px 14px; }
+            .boss-arena h3 { font-size: 1.4rem !important; }
+            .boss-header { gap: 10px; padding: 12px; flex-wrap: wrap; }
+            .boss-question { padding: 14px; font-size: 0.95rem; }
+            .boss-options { gap: 8px; }
+            .boss-opt { padding: 10px 12px; font-size: 0.88rem; }
+            .boss-start-btn { font-size: 1rem; padding: 12px 22px; }
+
+            /* Test paper headers */
+            .test-paper-header { padding: 16px; }
+            .test-paper-header h2 { font-size: 1.3rem; }
+
+            /* Print button - smaller */
+            .print-btn { width: 44px; height: 44px; font-size: 1.4rem; bottom: 12px; right: 12px; }
+        }
+
+        /* Tiny phones (≤380px) */
+        @media (max-width: 380px) {
+            .header h1 { font-size: 1.4rem; }
+            .nav-tab { font-size: 0.72rem; padding: 6px 9px; }
+            .sub-nav-btn { font-size: 0.74rem; padding: 6px 10px; }
+            .score-item .label { display: none; }
+            .water-tank { max-width: 240px; height: 220px; }
+            .water-tank-item { font-size: 2.3em; }
+            .reaction-circle { width: 160px; height: 160px; font-size: 1rem; }
+            .seq-grid { max-width: 240px; gap: 8px; }
+            .seq-btn { height: 78px; font-size: 0.9rem; }
+            .joke-q { padding-right: 50px; font-size: 0.9rem; }
+            .joke-card::after { content: "👆"; padding: 0; right: 10px; }
+            .lvl-btn { font-size: 0.74rem; padding: 7px 10px; }
+            .question-text { font-size: 0.9rem; }
+            .qnum { font-size: 0.72rem !important; padding: 2px 7px !important; }
+            table { font-size: 0.76rem; }
+            th, td { padding: 6px 6px; }
         }
 
         /* Scrollbar */
