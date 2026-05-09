@@ -1335,6 +1335,39 @@
         .seq-btn[data-color="yellow"] { background: linear-gradient(135deg, #FFD93D, #F9A825); color: #333; text-shadow: none; }
         .seq-btn:disabled { opacity: 0.55; cursor: not-allowed; }
 
+        /* Difficulty badges for Pro Numericals */
+        .difficulty {
+            display: inline-block;
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            margin-left: 8px;
+            font-family: 'Quicksand', sans-serif;
+            font-weight: 700;
+            letter-spacing: 0.3px;
+            vertical-align: middle;
+        }
+        .difficulty.medium { background: rgba(255,217,61,0.15); color: var(--lab-yellow); border: 1px solid rgba(255,217,61,0.5); }
+        .difficulty.hard   { background: rgba(234,67,53,0.15);  color: var(--lab-red);   border: 1px solid rgba(234,67,53,0.5); }
+        .pro-intro {
+            background: linear-gradient(135deg, rgba(179,136,255,0.12), rgba(0,229,255,0.08));
+            border: 2px solid var(--lab-purple);
+            border-radius: 16px;
+            padding: 20px;
+            margin-bottom: 18px;
+        }
+        .pro-tag {
+            display: inline-block;
+            padding: 5px 14px;
+            background: linear-gradient(135deg, var(--lab-purple), var(--lab-blue));
+            color: white;
+            border-radius: 16px;
+            font-family: 'Fredoka One', cursive;
+            font-size: 0.78rem;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+
         /* === Boss Battle additional styles === */
         .boss-intro, .boss-fight, .boss-victory, .boss-defeat {
             animation: fadeIn 0.5s ease;
@@ -1499,6 +1532,7 @@
             <button class="nav-tab" data-section="mcq">🎮 MCQ Challenge</button>
             <button class="nav-tab" data-section="practice">✏️ Practice Arena</button>
             <button class="nav-tab" data-section="tests">🧪 Test Papers</button>
+            <button class="nav-tab" data-section="pro">🔢 Pro Numericals</button>
             <button class="nav-tab" data-section="fun">🎪 Fun Zone</button>
             <button class="nav-tab" data-section="boss">👑 Boss Battle</button>
         </nav>
@@ -3565,6 +3599,309 @@
                         <div class="final-answer">✅ Copper has max mass (432.5 g). Only WOOD floats. Aluminium and Copper both sink.</div>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <!-- ===================== PRO NUMERICALS ===================== -->
+        <section class="section" id="pro">
+            <h2 class="section-title">🔢 Pro Numericals — 15 Brain Busters!</h2>
+            <p class="section-subtitle">Original problems beyond the textbook. Solve on paper first, then check the step-by-step solution. Truly test if you've mastered the chapter! 💪</p>
+
+            <div class="pro-intro">
+                <div class="pro-tag">🎯 ADVANCED ZONE</div>
+                <h3 style="color: var(--lab-cyan); margin-bottom: 8px;">📋 How this section works</h3>
+                <ul style="margin-left: 22px; line-height: 1.85;">
+                    <li><span class="difficulty medium">⭐⭐ Medium</span> — Multi-step but straightforward formula application (8 problems)</li>
+                    <li><span class="difficulty hard">⭐⭐⭐ Hard</span> — Requires deeper thinking, tricks, or insight (7 problems)</li>
+                    <li>📝 Solve in your notebook FIRST, then click "Reveal Solution"</li>
+                    <li>🎉 Got 12+ correct on first try? You're a pro!</li>
+                </ul>
+            </div>
+
+            <!-- Problem 1 -->
+            <div class="question-card">
+                <div class="question-text">
+                    <span class="qnum">P1</span><span class="difficulty medium">⭐⭐ Medium</span>
+                    <br><br>A rectangular metal block measures <strong>8 cm × 5 cm × 3 cm</strong> and has a mass of <strong>1080 g</strong>.
+                    <ol style="margin-left: 22px; margin-top: 10px;">
+                        <li>Find its volume.</li>
+                        <li>Find its density.</li>
+                        <li>Looking at common metal densities, what metal could it be?</li>
+                        <li>Will it sink in water? Why?</li>
+                    </ol>
+                </div>
+                <button class="reveal-btn" onclick="toggleAnswer('pn1')">Reveal Solution 🔓</button>
+                <div class="answer-block" id="pn1">
+                    <div class="step"><strong>Step 1:</strong> Volume of cuboid V = l × b × h = 8 × 5 × 3 = <strong>120 cm³</strong></div>
+                    <div class="step"><strong>Step 2:</strong> Density D = M/V = 1080 ÷ 120 = <strong>9 g/cm³</strong></div>
+                    <div class="step"><strong>Step 3:</strong> From the density chart, copper (8.3–9.0 g/cm³) matches → likely <strong>copper</strong> 🟫.</div>
+                    <div class="step"><strong>Step 4:</strong> Density 9 g/cm³ is much greater than water's 1 g/cm³, so the block <strong>SINKS</strong>.</div>
+                    <div class="final-answer">🎯 V = 120 cm³ &nbsp;|&nbsp; D = 9 g/cm³ &nbsp;|&nbsp; Copper &nbsp;|&nbsp; SINKS</div>
+                </div>
+            </div>
+
+            <!-- Problem 2 -->
+            <div class="question-card">
+                <div class="question-text">
+                    <span class="qnum">P2</span><span class="difficulty medium">⭐⭐ Medium</span>
+                    <br><br>A motorcycle travels at <strong>90 km/h</strong> while a sprinter runs at <strong>12 m/s</strong>. Who is faster, and by how many m/s?
+                </div>
+                <button class="reveal-btn" onclick="toggleAnswer('pn2')">Reveal Solution 🔓</button>
+                <div class="answer-block" id="pn2">
+                    <div class="step"><strong>Step 1:</strong> Convert motorcycle's speed to m/s: 90 km/h × 5/18 = 450/18 = <strong>25 m/s</strong></div>
+                    <div class="step"><strong>Step 2:</strong> Sprinter's speed = 12 m/s</div>
+                    <div class="step"><strong>Step 3:</strong> Difference = 25 − 12 = <strong>13 m/s</strong></div>
+                    <div class="final-answer">🎯 The motorcycle is faster by <strong>13 m/s</strong>.</div>
+                </div>
+            </div>
+
+            <!-- Problem 3 -->
+            <div class="question-card">
+                <div class="question-text">
+                    <span class="qnum">P3</span><span class="difficulty medium">⭐⭐ Medium</span>
+                    <br><br>A water tank holds <strong>0.45 m³</strong> of water.
+                    <ol style="margin-left: 22px; margin-top: 10px;">
+                        <li>How many litres is this?</li>
+                        <li>If a small bucket holds 1500 mL, how many full buckets are needed to fill the tank?</li>
+                    </ol>
+                </div>
+                <button class="reveal-btn" onclick="toggleAnswer('pn3')">Reveal Solution 🔓</button>
+                <div class="answer-block" id="pn3">
+                    <div class="step"><strong>Step 1:</strong> 1 m³ = 1000 L, so 0.45 m³ = 0.45 × 1000 = <strong>450 L</strong></div>
+                    <div class="step"><strong>Step 2:</strong> Bucket capacity = 1500 mL = 1500 ÷ 1000 = <strong>1.5 L</strong></div>
+                    <div class="step"><strong>Step 3:</strong> Number of buckets = 450 ÷ 1.5 = <strong>300</strong></div>
+                    <div class="final-answer">🎯 (a) 450 L &nbsp;|&nbsp; (b) 300 buckets</div>
+                </div>
+            </div>
+
+            <!-- Problem 4 -->
+            <div class="question-card">
+                <div class="question-text">
+                    <span class="qnum">P4</span><span class="difficulty medium">⭐⭐ Medium</span>
+                    <br><br>A jewellery maker has <strong>250 g of pure silver</strong> (density 10.5 g/cm³).
+                    <ol style="margin-left: 22px; margin-top: 10px;">
+                        <li>What volume does the silver occupy?</li>
+                        <li>She rolls it into a thin sheet measuring <strong>25 cm × 20 cm</strong>. What is its thickness in mm?</li>
+                    </ol>
+                </div>
+                <button class="reveal-btn" onclick="toggleAnswer('pn4')">Reveal Solution 🔓</button>
+                <div class="answer-block" id="pn4">
+                    <div class="step"><strong>Step 1:</strong> Volume V = M ÷ D = 250 ÷ 10.5 = <strong>23.81 cm³</strong></div>
+                    <div class="step"><strong>Step 2:</strong> The sheet is a very flat cuboid: V = l × b × h<br>23.81 = 25 × 20 × h<br>23.81 = 500 × h</div>
+                    <div class="step"><strong>Step 3:</strong> h = 23.81 ÷ 500 = 0.04762 cm</div>
+                    <div class="step"><strong>Step 4:</strong> Convert to mm: 0.04762 × 10 = <strong>0.476 mm</strong></div>
+                    <div class="final-answer">🎯 V ≈ 23.81 cm³ &nbsp;|&nbsp; Thickness ≈ <strong>0.48 mm</strong> (very thin!)</div>
+                </div>
+            </div>
+
+            <!-- Problem 5 -->
+            <div class="question-card">
+                <div class="question-text">
+                    <span class="qnum">P5</span><span class="difficulty medium">⭐⭐ Medium</span>
+                    <br><br>A student drops a stone into a measuring cylinder containing <strong>75 mL</strong> of water. The water level rises to <strong>142 mL</strong>. The stone's mass is <strong>187.6 g</strong>.
+                    <ol style="margin-left: 22px; margin-top: 10px;">
+                        <li>Find the volume of the stone.</li>
+                        <li>Find its density.</li>
+                        <li>What might it be made of?</li>
+                    </ol>
+                </div>
+                <button class="reveal-btn" onclick="toggleAnswer('pn5')">Reveal Solution 🔓</button>
+                <div class="answer-block" id="pn5">
+                    <div class="step"><strong>Step 1:</strong> Volume of stone = V₂ − V₁ = 142 − 75 = <strong>67 mL = 67 cm³</strong></div>
+                    <div class="step"><strong>Step 2:</strong> Density D = M ÷ V = 187.6 ÷ 67 = <strong>2.8 g/cm³</strong></div>
+                    <div class="step"><strong>Step 3:</strong> Aluminium has density 2.7 g/cm³ — closest match. The stone is likely <strong>granite or aluminium</strong> (or a similar light metal/rock).</div>
+                    <div class="final-answer">🎯 V = 67 cm³ &nbsp;|&nbsp; D = 2.8 g/cm³ &nbsp;|&nbsp; Likely granite or aluminium</div>
+                </div>
+            </div>
+
+            <!-- Problem 6 -->
+            <div class="question-card">
+                <div class="question-text">
+                    <span class="qnum">P6</span><span class="difficulty hard">⭐⭐⭐ Hard</span>
+                    <br><br>A car covers the first <strong>60 km</strong> of a journey at <strong>40 km/h</strong>, then the next <strong>60 km</strong> at <strong>60 km/h</strong>. Find the total time and the average speed for the entire journey.
+                    <br><br><em>⚠️ Trap:</em> The answer is NOT simply (40+60)/2 = 50 km/h!
+                </div>
+                <button class="reveal-btn" onclick="toggleAnswer('pn6')">Reveal Solution 🔓</button>
+                <div class="answer-block" id="pn6">
+                    <div class="step"><strong>Step 1:</strong> Time for 1st segment = 60 ÷ 40 = <strong>1.5 hours</strong></div>
+                    <div class="step"><strong>Step 2:</strong> Time for 2nd segment = 60 ÷ 60 = <strong>1.0 hour</strong></div>
+                    <div class="step"><strong>Step 3:</strong> Total distance = 60 + 60 = 120 km<br>Total time = 1.5 + 1.0 = <strong>2.5 hours</strong></div>
+                    <div class="step"><strong>Step 4:</strong> Average speed = Total distance ÷ Total time = 120 ÷ 2.5 = <strong>48 km/h</strong></div>
+                    <div class="step"><strong>Why not 50?</strong> Because the car spends MORE time at the slower speed (1.5 h at 40 km/h vs only 1 h at 60 km/h). Slower portions weigh more in the average. ⚠️</div>
+                    <div class="final-answer">🎯 Total time = 2.5 h &nbsp;|&nbsp; Average speed = <strong>48 km/h</strong></div>
+                </div>
+            </div>
+
+            <!-- Problem 7 -->
+            <div class="question-card">
+                <div class="question-text">
+                    <span class="qnum">P7</span><span class="difficulty medium">⭐⭐ Medium</span>
+                    <br><br>A leaf placed on graph paper covers:<br>
+                    • 28 <strong>full</strong> squares<br>
+                    • 12 squares <strong>more than half</strong> filled<br>
+                    • 8 squares <strong>exactly half</strong> filled<br>
+                    • 6 squares <strong>less than half</strong> filled<br>
+                    Each square is 1 cm² × 1 cm². Find the leaf's area.
+                </div>
+                <button class="reveal-btn" onclick="toggleAnswer('pn7')">Reveal Solution 🔓</button>
+                <div class="answer-block" id="pn7">
+                    <div class="step"><strong>Step 1 — Apply the counting rules:</strong></div>
+                    <div class="step">• Full squares: count as 1 each → 28 × 1 = <strong>28 cm²</strong></div>
+                    <div class="step">• More-than-half squares: count as 1 each → 12 × 1 = <strong>12 cm²</strong></div>
+                    <div class="step">• Exactly-half squares: count as ½ each → 8 × 0.5 = <strong>4 cm²</strong></div>
+                    <div class="step">• Less-than-half squares: ignore → <strong>0 cm²</strong></div>
+                    <div class="step"><strong>Step 2:</strong> Total = 28 + 12 + 4 + 0 = <strong>44 cm²</strong></div>
+                    <div class="final-answer">🎯 Area of the leaf = <strong>44 cm²</strong></div>
+                </div>
+            </div>
+
+            <!-- Problem 8 -->
+            <div class="question-card">
+                <div class="question-text">
+                    <span class="qnum">P8</span><span class="difficulty medium">⭐⭐ Medium</span>
+                    <br><br>A cubical box has side <strong>12 cm</strong>. Another box (cuboid) has dimensions <strong>18 cm × 9 cm × 6 cm</strong>. Which has greater volume, and by how much?
+                </div>
+                <button class="reveal-btn" onclick="toggleAnswer('pn8')">Reveal Solution 🔓</button>
+                <div class="answer-block" id="pn8">
+                    <div class="step"><strong>Step 1:</strong> Cube volume = side³ = 12³ = 12 × 12 × 12 = <strong>1728 cm³</strong></div>
+                    <div class="step"><strong>Step 2:</strong> Cuboid volume = l × b × h = 18 × 9 × 6 = <strong>972 cm³</strong></div>
+                    <div class="step"><strong>Step 3:</strong> Difference = 1728 − 972 = <strong>756 cm³</strong></div>
+                    <div class="final-answer">🎯 The <strong>cube</strong> has greater volume, by <strong>756 cm³</strong>.</div>
+                </div>
+            </div>
+
+            <!-- Problem 9 -->
+            <div class="question-card">
+                <div class="question-text">
+                    <span class="qnum">P9</span><span class="difficulty hard">⭐⭐⭐ Hard</span>
+                    <br><br>An alloy is made by mixing <strong>200 g of metal A</strong> (density 8 g/cm³) with <strong>300 g of metal B</strong> (density 12 g/cm³). Assuming no volume change on mixing, find the density of the alloy.
+                </div>
+                <button class="reveal-btn" onclick="toggleAnswer('pn9')">Reveal Solution 🔓</button>
+                <div class="answer-block" id="pn9">
+                    <div class="step"><strong>Trick:</strong> You can't just average the densities! You need to find total mass and total volume separately.</div>
+                    <div class="step"><strong>Step 1:</strong> Volume of metal A = M_A ÷ D_A = 200 ÷ 8 = <strong>25 cm³</strong></div>
+                    <div class="step"><strong>Step 2:</strong> Volume of metal B = M_B ÷ D_B = 300 ÷ 12 = <strong>25 cm³</strong></div>
+                    <div class="step"><strong>Step 3:</strong> Total mass = 200 + 300 = <strong>500 g</strong></div>
+                    <div class="step"><strong>Step 4:</strong> Total volume = 25 + 25 = <strong>50 cm³</strong></div>
+                    <div class="step"><strong>Step 5:</strong> Density of alloy = Total mass ÷ Total volume = 500 ÷ 50 = <strong>10 g/cm³</strong></div>
+                    <div class="final-answer">🎯 Density of alloy = <strong>10 g/cm³</strong> (sits exactly between 8 and 12 here, but that's a coincidence — it depends on the volumes!)</div>
+                </div>
+            </div>
+
+            <!-- Problem 10 -->
+            <div class="question-card">
+                <div class="question-text">
+                    <span class="qnum">P10</span><span class="difficulty hard">⭐⭐⭐ Hard</span>
+                    <br><br>A wooden block of density <strong>0.8 g/cm³</strong> is placed in water (density 1 g/cm³). What fraction of the block is submerged underwater?
+                </div>
+                <button class="reveal-btn" onclick="toggleAnswer('pn10')">Reveal Solution 🔓</button>
+                <div class="answer-block" id="pn10">
+                    <div class="step"><strong>Key idea (Archimedes):</strong> When something floats, the weight of water it pushes aside equals its own weight.</div>
+                    <div class="step"><strong>Step 1:</strong> Let the block's total volume be V. Its mass = V × 0.8 g.</div>
+                    <div class="step"><strong>Step 2:</strong> Let the submerged part be V_sub. Mass of water it displaces = V_sub × 1 g.</div>
+                    <div class="step"><strong>Step 3:</strong> Weight of block = weight of water displaced<br>V × 0.8 = V_sub × 1</div>
+                    <div class="step"><strong>Step 4:</strong> So V_sub ÷ V = 0.8 = <strong>4/5</strong></div>
+                    <div class="final-answer">🎯 <strong>4/5 (or 80%)</strong> of the block is underwater. Only 1/5 (20%) sticks above the surface! 🪵🌊</div>
+                </div>
+            </div>
+
+            <!-- Problem 11 -->
+            <div class="question-card">
+                <div class="question-text">
+                    <span class="qnum">P11</span><span class="difficulty hard">⭐⭐⭐ Hard</span>
+                    <br><br>A hollow steel ball (steel density 7.8 g/cm³) has total volume <strong>200 cm³</strong> and contains <strong>180 cm³ of air</strong> inside (air mass is negligible).
+                    <ol style="margin-left: 22px; margin-top: 10px;">
+                        <li>Find the mass of the ball.</li>
+                        <li>Find its average density.</li>
+                        <li>Will it float in water?</li>
+                    </ol>
+                </div>
+                <button class="reveal-btn" onclick="toggleAnswer('pn11')">Reveal Solution 🔓</button>
+                <div class="answer-block" id="pn11">
+                    <div class="step"><strong>Step 1:</strong> Volume of steel only = Total volume − Air volume = 200 − 180 = <strong>20 cm³</strong></div>
+                    <div class="step"><strong>Step 2:</strong> Mass of steel = 20 × 7.8 = <strong>156 g</strong> (≈ mass of ball, since air is negligible)</div>
+                    <div class="step"><strong>Step 3:</strong> Average density = Total mass ÷ Total volume = 156 ÷ 200 = <strong>0.78 g/cm³</strong></div>
+                    <div class="step"><strong>Step 4:</strong> 0.78 < 1 g/cm³ → the ball <strong>FLOATS</strong>! 🦆</div>
+                    <div class="final-answer">🎯 Mass = 156 g &nbsp;|&nbsp; Avg density = 0.78 g/cm³ &nbsp;|&nbsp; FLOATS<br><em>This is the same secret behind why steel ships float! 🚢</em></div>
+                </div>
+            </div>
+
+            <!-- Problem 12 -->
+            <div class="question-card">
+                <div class="question-text">
+                    <span class="qnum">P12</span><span class="difficulty hard">⭐⭐⭐ Hard</span>
+                    <br><br>A boy cycles to school at <strong>15 km/h</strong> and returns home at <strong>10 km/h</strong> on the same route. What is his average speed for the entire trip?
+                    <br><br><em>⚠️ Trap:</em> It's NOT (15 + 10)/2 = 12.5 km/h!
+                </div>
+                <button class="reveal-btn" onclick="toggleAnswer('pn12')">Reveal Solution 🔓</button>
+                <div class="answer-block" id="pn12">
+                    <div class="step"><strong>Step 1:</strong> Let one-way distance = d km.</div>
+                    <div class="step"><strong>Step 2:</strong> Time to school = d ÷ 15 hours</div>
+                    <div class="step"><strong>Step 3:</strong> Time back home = d ÷ 10 hours</div>
+                    <div class="step"><strong>Step 4:</strong> Total distance = 2d km<br>Total time = d/15 + d/10 = 2d/30 + 3d/30 = 5d/30 = <strong>d/6 hours</strong></div>
+                    <div class="step"><strong>Step 5:</strong> Average speed = Total distance ÷ Total time = 2d ÷ (d/6) = 2d × 6/d = <strong>12 km/h</strong></div>
+                    <div class="step"><strong>Why not 12.5?</strong> Because he spends MORE time on the slower return trip. Just like P6, slow segments dominate the average.</div>
+                    <div class="final-answer">🎯 Average speed = <strong>12 km/h</strong> (not 12.5!)</div>
+                </div>
+            </div>
+
+            <!-- Problem 13 -->
+            <div class="question-card">
+                <div class="question-text">
+                    <span class="qnum">P13</span><span class="difficulty medium">⭐⭐ Medium</span>
+                    <br><br>Two metal cubes look identical, each of side <strong>2 cm</strong>. Cube A has mass <strong>21.6 g</strong>; Cube B has mass <strong>13.92 g</strong>.<br>
+                    Pure aluminium has density 2.7 g/cm³, pure magnesium has density 1.74 g/cm³.<br>
+                    Identify each cube. ⚙️
+                </div>
+                <button class="reveal-btn" onclick="toggleAnswer('pn13')">Reveal Solution 🔓</button>
+                <div class="answer-block" id="pn13">
+                    <div class="step"><strong>Step 1:</strong> Volume of each cube = 2³ = <strong>8 cm³</strong> (same for both)</div>
+                    <div class="step"><strong>Step 2:</strong> Density of A = 21.6 ÷ 8 = <strong>2.7 g/cm³</strong> → matches aluminium</div>
+                    <div class="step"><strong>Step 3:</strong> Density of B = 13.92 ÷ 8 = <strong>1.74 g/cm³</strong> → matches magnesium</div>
+                    <div class="final-answer">🎯 Cube A = <strong>Aluminium</strong> &nbsp;|&nbsp; Cube B = <strong>Magnesium</strong><br><em>Density is like a metal's "fingerprint" — identical-looking cubes can be told apart by mass alone!</em> 🔍</div>
+                </div>
+            </div>
+
+            <!-- Problem 14 -->
+            <div class="question-card">
+                <div class="question-text">
+                    <span class="qnum">P14</span><span class="difficulty hard">⭐⭐⭐ Hard</span>
+                    <br><br>A train <strong>200 m long</strong> is moving at <strong>72 km/h</strong>. How long will it take to <em>completely cross</em> a platform <strong>300 m long</strong>?
+                </div>
+                <button class="reveal-btn" onclick="toggleAnswer('pn14')">Reveal Solution 🔓</button>
+                <div class="answer-block" id="pn14">
+                    <div class="step"><strong>Key insight:</strong> "Completely cross" means from when the train's front enters the platform to when its tail leaves. The front of the train must travel the platform's length PLUS the train's own length!</div>
+                    <div class="step"><strong>Step 1:</strong> Total distance = train length + platform length = 200 + 300 = <strong>500 m</strong></div>
+                    <div class="step"><strong>Step 2:</strong> Convert speed to m/s: 72 × 5/18 = 360/18 = <strong>20 m/s</strong></div>
+                    <div class="step"><strong>Step 3:</strong> Time = Distance ÷ Speed = 500 ÷ 20 = <strong>25 seconds</strong></div>
+                    <div class="final-answer">🎯 Time to cross = <strong>25 s</strong> 🚄</div>
+                </div>
+            </div>
+
+            <!-- Problem 15 -->
+            <div class="question-card">
+                <div class="question-text">
+                    <span class="qnum">P15</span><span class="difficulty hard">⭐⭐⭐ Hard</span>
+                    <br><br>A cuboidal water tank has internal dimensions <strong>80 cm × 50 cm × 40 cm</strong>. It is half-full of water. A solid iron cube of side <strong>20 cm</strong> is dropped inside. By how much does the water level rise?
+                </div>
+                <button class="reveal-btn" onclick="toggleAnswer('pn15')">Reveal Solution 🔓</button>
+                <div class="answer-block" id="pn15">
+                    <div class="step"><strong>Step 1:</strong> Tank's base area = 80 × 50 = <strong>4000 cm²</strong></div>
+                    <div class="step"><strong>Step 2:</strong> Initial water depth = 40 ÷ 2 = 20 cm<br>Initial water volume = 4000 × 20 = <strong>80,000 cm³</strong></div>
+                    <div class="step"><strong>Step 3:</strong> Iron is dense (7.8 g/cm³), so the cube sinks fully. Volume of cube = 20³ = <strong>8000 cm³</strong></div>
+                    <div class="step"><strong>Step 4:</strong> Now the tank holds water + the submerged cube:<br>Total volume taken = 80,000 + 8,000 = <strong>88,000 cm³</strong></div>
+                    <div class="step"><strong>Step 5:</strong> New water level = Total volume ÷ Base area = 88,000 ÷ 4000 = <strong>22 cm</strong></div>
+                    <div class="step"><strong>Step 6:</strong> Rise in water level = 22 − 20 = <strong>2 cm</strong></div>
+                    <div class="step"><em>Verify:</em> Cube top is at 20 cm; new water level (22 cm) > 20 cm, so the cube is fully submerged. ✅</div>
+                    <div class="final-answer">🎯 Water level rises by <strong>2 cm</strong> 💧</div>
+                </div>
+            </div>
+
+            <!-- Closing card -->
+            <div class="card" style="background: linear-gradient(135deg, rgba(76,175,80,0.12), rgba(255,217,61,0.08)); border: 2px solid var(--lab-green); margin-top: 24px;">
+                <h3 style="color: var(--lab-green);">🏆 Did you finish all 15?</h3>
+                <p>You just tackled real-world problems involving alloy density, harmonic-mean speeds, hollow-ball mysteries, train-platform tricks, and water-rise calculations — concepts that go BEYOND the standard textbook!</p>
+                <p style="margin-top: 10px;">If you got <strong>12 or more correct</strong> on the first try, you're officially a <span style="color: var(--lab-yellow);"><strong>Master of Measurement</strong></span> 🥇. Now head over to the 👑 Boss Battle to put it all together!</p>
             </div>
         </section>
 
